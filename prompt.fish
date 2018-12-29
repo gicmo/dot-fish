@@ -7,6 +7,10 @@ function fish_prompt
 
     set -l print_userhost
 
+    if set -q UNDER_JHBUILD
+	set color_suffix $fish_pager_color_progress
+    end
+
     switch "$USER"
         case root toor
 	    set -l color_root $fish_color_error
