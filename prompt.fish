@@ -5,6 +5,9 @@ function fish_prompt
     set -l color_suffix $fish_color_normal
     set -l color_user $fish_color_user
 
+    set -l prefix_symbol 'λ'
+    set -l suffix_symbol '→'
+
     set -l print_userhost
 
     if set -q UNDER_JHBUILD
@@ -40,12 +43,12 @@ function fish_prompt
 	echo -n " "
     else
 	set_color $color_lambda
-	echo -n 'λ '
+	printf '%s ' $prefix_symbol
 	set_color $fish_color_normal
     end
 
     set_color $color_cwd
     echo -n (prompt_pwd)
     set_color $color_suffix
-    echo -n ' → '
+    printf ' %s ' $suffix_symbol
 end
