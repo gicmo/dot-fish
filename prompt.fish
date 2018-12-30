@@ -11,6 +11,10 @@ function fish_prompt
 	set color_suffix $fish_pager_color_progress
     end
 
+    if set -q VIRTUAL_ENV
+	set color_suffix $fish_pager_color_progress
+    end
+
     switch "$USER"
         case root toor
 	    set -l color_root $fish_color_error
