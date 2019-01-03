@@ -27,5 +27,13 @@ set -x EDITOR ew
 set -x CVSEDITOR $EDITOR
 set -x VISUAL $EDITOR
 
+
+# -=[ are we clever?
+
+if test "$TERM" = "dumb"
+    source $AQUARIUM/utils/play_dumb.fish
+    exit
+end
+
 # -=[ colors
 source $AQUARIUM/colors/nord.fish
