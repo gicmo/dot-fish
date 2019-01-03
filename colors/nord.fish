@@ -27,7 +27,7 @@ set fish_color_error $nord11
 set fish_color_escape $nord13
 set fish_color_host $nord3
 set fish_color_match $nord8
-set fish_color_normal $nord4
+set fish_color_normal $nord6
 set fish_color_operator $nord9
 set fish_color_param $nord4
 set fish_color_quote $nord14
