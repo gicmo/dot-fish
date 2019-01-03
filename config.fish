@@ -27,3 +27,5 @@ set -x EDITOR ew
 set -x CVSEDITOR $EDITOR
 set -x VISUAL $EDITOR
 
+# -=[ colors
+source $AQUARIUM/colors/nord.fish
