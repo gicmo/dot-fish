@@ -42,4 +42,7 @@ if status is-interactive
     # -=[ colors
     source $AQUARIUM/colors/nord.fish
 
+    # -=[ colors
+    source $AQUARIUM/aliases.fish
+
 end
