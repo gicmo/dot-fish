@@ -10,7 +10,7 @@ set -x LANG en_GB.UTF-8
 
 # [ paths and PATH ]
 
-set -x AQUARIUM ~/.config/fish/
+set -x AQUARIUM ~/.config/fish
 set -x CODE_HOME ~/Code
 
 set -x GOPATH $CODE_HOME/go
