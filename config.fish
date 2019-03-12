@@ -35,5 +35,11 @@ if test "$TERM" = "dumb"
     exit
 end
 
-# -=[ colors
-source $AQUARIUM/colors/nord.fish
+# -=[ are we an interactive session?
+
+if status is-interactive
+
+    # -=[ colors
+    source $AQUARIUM/colors/nord.fish
+
+end
