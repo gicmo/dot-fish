@@ -7,6 +7,7 @@ function fish_prompt
 
     set -l prefix_symbol 'λ'
     set -l suffix_symbol '→'
+    set -l inside_symbol '▢'
 
     set -l print_userhost
 
@@ -39,11 +40,17 @@ function fish_prompt
 	echo -n @
 	set_color $fish_color_host
 	echo -n (hostname)
-	set_color $fish_color_normal
-	echo -n " "
     else
 	set_color $color_lambda
-	printf '%s ' $prefix_symbol
+	printf '%s' $prefix_symbol
+    end
+
+    set_color $fish_color_normal
+    echo -n " "
+
+    if set -q container
+	set_color $color_lambda
+	printf '%s ' $inside_symbol
 	set_color $fish_color_normal
     end
 
