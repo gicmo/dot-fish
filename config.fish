@@ -17,6 +17,7 @@ set -x CODE_HOME ~/Code
 
 set -x GOPATH $CODE_HOME/go
 set -x WORKON_HOME $CODE_HOME/envs
+set -x VIRTUALFISH_HOME $CODE_HOME/envs
 set -x RUST_SRC_PATH $CODE_HOME/src/rust/src
 
 path_add ~/.local/bin
