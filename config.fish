@@ -3,10 +3,12 @@
 
 # -=[ environment
 
-set -x EMAIL_ADDRESS "christian@kellner.me"
+set -x EMAIL "christian@kellner.me"
+set -x EMAIL_ADDRESS "$EMAIL"
 
 set -x LC_ALL en_GB.UTF-8
 set -x LANG en_GB.UTF-8
+
 
 # [ paths and PATH ]
 
@@ -20,6 +22,7 @@ set -x RUST_SRC_PATH $CODE_HOME/src/rust/src
 path_add ~/.local/bin
 path_add ~/.cargo/bin $GOPATH/bin
 path_add /usr/local/bin /usr/local/sbin/
+
 
 # [ editors ]
 
