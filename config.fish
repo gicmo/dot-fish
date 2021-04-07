@@ -39,6 +39,14 @@ if test "$TERM" = "dumb"
     exit
 end
 
+if not set -q container;
+    if grep -siq "docker" /proc/1/cgroup
+        set -x container docker
+    else if grep -siq "lxc" /proc/1/cgroup
+        set -x container lxc
+    end
+end
+
 # -=[ are we an interactive session?
 
 if status is-interactive
