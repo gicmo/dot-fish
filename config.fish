@@ -23,7 +23,7 @@ set -x RUST_SRC_PATH $CODE_HOME/src/rust/src
 path_add ~/.local/bin
 path_add ~/.cargo/bin $GOPATH/bin
 path_add /usr/local/bin /usr/local/sbin/
-
+path_add /opt/local/bin /opt/local/sbin/
 
 # [ editors ]
 
