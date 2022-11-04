@@ -27,7 +27,14 @@ path_add /opt/local/bin /opt/local/sbin/
 
 # [ editors ]
 
-set -x EDITOR ew
+if type -q nvim
+    set -x EDITOR nvim
+else if type -q vim
+    set -x EDITOR vim
+else
+    set -x EDITOR vi
+end
+
 set -x CVSEDITOR $EDITOR
 set -x VISUAL $EDITOR
 
